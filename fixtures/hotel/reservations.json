@@ -1,0 +1,92 @@
+[
+  {
+    "id": "res-101", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 1, "children": 0,
+    "source": "Expedia", "total": 180, "currency": "EUR",
+    "guest": {"first_name": "A.", "last_name": "Ferreira", "country": "PT"},
+    "loyalty": false, "guaranteed": false, "booked_days_ago": 74
+  },
+  {
+    "id": "res-102", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-17",
+    "room_type_id": "deluxe", "room_type_name": "Deluxe Room", "adults": 2, "children": 0,
+    "source": "Booking.com", "total": 480, "currency": "EUR",
+    "guest": {"first_name": "L.", "last_name": "Moreau", "country": "FR"},
+    "loyalty": false, "guaranteed": false, "booked_days_ago": 91
+  },
+  {
+    "id": "res-103", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-18",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 2, "children": 0,
+    "source": "Direct", "total": 540, "currency": "EUR",
+    "guest": {"first_name": "M.", "last_name": "Dubois", "email": "m.dubois@example.com",
+              "phone": "+1 555 0103", "country": "FR"},
+    "loyalty": true, "guaranteed": true, "booked_days_ago": 3
+  },
+  {
+    "id": "res-104", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 1, "children": 0,
+    "source": "Corporate", "total": 180, "currency": "EUR",
+    "guest": {"first_name": "R.", "last_name": "Silva", "email": "r.silva@example.com",
+              "country": "PT"},
+    "loyalty": false, "guaranteed": true, "booked_days_ago": 5
+  },
+  {
+    "id": "res-105", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 1, "children": 0,
+    "source": "Phone", "total": 180, "currency": "EUR",
+    "guest": {"first_name": "T.", "last_name": "Nkomo", "phone": "+1 555 0105", "country": "ZA"},
+    "loyalty": false, "guaranteed": true, "booked_days_ago": 1
+  },
+  {
+    "id": "res-106", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 1, "children": 0,
+    "source": "Walk-in", "total": 180, "currency": "EUR",
+    "guest": {"first_name": "K.", "last_name": "Larsen", "phone": "+1 555 0106", "country": "SE"},
+    "loyalty": false, "guaranteed": true, "booked_days_ago": 0
+  },
+  {
+    "id": "res-107", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-17",
+    "room_type_id": "deluxe", "room_type_name": "Deluxe Room", "adults": 2, "children": 1,
+    "source": "Direct", "total": 480, "currency": "EUR",
+    "guest": {"first_name": "J.", "last_name": "Petit", "email": "j.petit@example.com",
+              "phone": "+1 555 0107", "country": "BE"},
+    "loyalty": true, "guaranteed": true, "booked_days_ago": 20
+  },
+  {
+    "id": "res-108", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "deluxe", "room_type_name": "Deluxe Room", "adults": 2, "children": 0,
+    "source": "Airbnb", "total": 240, "currency": "EUR",
+    "guest": {"first_name": "F.", "last_name": "Costa", "email": "f.costa@example.com",
+              "country": "PT"},
+    "loyalty": false, "guaranteed": true, "booked_days_ago": 10
+  },
+  {
+    "id": "res-109", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-17",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 1, "children": 0,
+    "source": "Corporate", "total": 360, "currency": "EUR",
+    "guest": {"first_name": "P.", "last_name": "Andrade", "country": "PT"},
+    "loyalty": false, "guaranteed": false, "booked_days_ago": 30
+  },
+  {
+    "id": "res-110", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 2, "children": 0,
+    "source": "Vrbo", "total": 180, "currency": "EUR",
+    "guest": {"first_name": "B.", "last_name": "Hughes", "country": "GB"},
+    "loyalty": false, "guaranteed": false, "booked_days_ago": 45
+  },
+  {
+    "id": "res-111", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-19",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 2, "children": 0,
+    "source": "Expedia", "total": 720, "currency": "EUR",
+    "guest": {"first_name": "S.", "last_name": "Almeida", "email": "s.almeida@example.com",
+              "country": "ES"},
+    "loyalty": false, "guaranteed": false, "booked_days_ago": 40
+  },
+  {
+    "id": "res-112", "status": "confirmed", "check_in": "2026-09-15", "check_out": "2026-09-16",
+    "room_type_id": "classic", "room_type_name": "Classic Room", "adults": 1, "children": 0,
+    "source": "Direct", "total": 180, "currency": "EUR",
+    "guest": {"first_name": "D.", "last_name": "Rocha", "email": "d.rocha@example.com",
+              "phone": "+1 555 0112", "country": "PT"},
+    "loyalty": true, "guaranteed": true, "booked_days_ago": 2
+  }
+]

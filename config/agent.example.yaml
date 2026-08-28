@@ -1,0 +1,106 @@
+# ---------------------------------------------------------------------------
+# agent.yaml - Overbooking & No-Show AI's own knobs. `make setup` copies this
+# to config/agent.yaml; edit that copy, this example stays as a clean
+# reference. See docs/how-it-works.md for what every formula does with these.
+#
+# This agent has no LLM step (see docs/how-it-works.md "Design decisions" #0)
+# so there is no `llm:` block here - everything below is arithmetic.
+# ---------------------------------------------------------------------------
+
+# --- Which systems this agent actually reads through core/adapters ---------
+# This agent only ever reads the PMS (tonight's arrivals, the in-house count
+# and the reference_room_type rate) - see the "What Overbooking & No-Show AI
+# actually uses" note in docs/integrations.md. It has no guest inbox, drafts
+# nothing and contacts no one, so email and messaging are left out on
+# purpose: their adapters stay mock forever and must never trigger the
+# "SAMPLE DATA" warning. Listing pms still warns you correctly if the PMS is
+# left on mock once you are running for real. (The published buffer is also
+# written to sheets, which is a write-only audit trail, not a data source.)
+systems_used: [pms]
+
+# How many nights ahead each scan scores, starting tonight (night 0).
+# The spec's canonical story is a single sold-out night; raise this once you
+# trust the recommendation and want a week of sell limits at once.
+horizon_nights: 1
+
+# The room type whose tonight rate the buffer protects, and whose rate the
+# walk-partner room is priced off (`get_rates()` reads it straight from the
+# PMS - no separate "rate engine"). Must be one of your PMS's real room type
+# ids/codes.
+reference_room_type: classic
+
+# rules.oversell_buffer OFF forces buffer 0 whatever the prediction says -
+# "Controlled overbooking is disabled by rule." This is the one on/off switch
+# from the source; everything else here is this template's own addition.
+rules:
+  oversell_buffer: true
+
+oversell:
+  # Hard cap on rooms recommended over capacity, regardless of how many
+  # no-shows are predicted. The spec's number is 3 - raise it if your
+  # property wants more rope, but read docs/how-it-works.md "Design
+  # decisions" #3 first: this is still a single global cap, not a seasonal
+  # or per-night band.
+  max_buffer: 3
+
+# A reservation cancelled within this many hours of its own check-in counts
+# as a no-show for tonight's capacity, not as "no arrival to score" - see
+# docs/how-it-works.md "Design decisions" #8.
+late_cancellation_hours: 48
+
+# The no-show / late-cancellation risk score. Every arrival starts at
+# base_pct and these terms add or subtract from it, then clamp to
+# [min_pct, max_pct]. Edit the numbers, not the code, if your own history
+# says a factor matters more or less than this.
+risk:
+  base_pct: 8
+  # Points by booking channel. Anything not listed here (Booking.com,
+  # Expedia, Airbnb, any other OTA) uses ota_default_pts.
+  channel_pts:
+    Direct: 0
+    Corporate: -2
+    Phone: 4
+    Walk-in: -4
+  ota_default_pts: 10
+  guarantee_pts:
+    guaranteed: -12     # card on file / prepaid
+    not_guaranteed: 15
+  # Lead time brackets, in days between the booking and check-in.
+  lead_time:
+    same_day_days: 1     # booked_days_ago <= this -> same_day bracket
+    same_day_pts: -6
+    short_days: 14        # <= this (and > same_day_days) -> short bracket
+    short_pts: 0
+    medium_days: 60       # <= this (and > short_days) -> medium bracket
+    medium_pts: 5
+    long_pts: 10           # > medium_days
+  loyalty_pct: -8
+  uncontactable_pct: 8     # no email or phone on file
+  min_pct: 2
+  max_pct: 95
+  # Bands used for the human-readable basis text and the walk-plan reasons.
+  high_threshold: 50
+  medium_threshold: 20
+
+# The walk plan's cost card. Priced, never posted to a ledger - see
+# docs/safety.md.
+walk:
+  taxi_cost: 18
+  goodwill_credit: 50
+  # Ranked list; the plan always uses partners[0]. Availability is never
+  # checked automatically - see docs/how-it-works.md "Design decisions" #5.
+  partners:
+    - name: "Harborview Inn"
+      rate_multiplier: 0.95
+    - name: "Cedar Court Hotel"
+      rate_multiplier: 1.05
+
+# How often `tools/run.py --watch` re-scans, and what `make schedule` prints
+# by default. See scheduler/ for cron/launchd/systemd.
+schedule:
+  scan:
+    command: "tools/run.py --once"
+    cadence: "0 18 * * *"          # 18:00 daily - score before the evening rush
+  reconcile:
+    command: "tools/run.py --once --reconcile"
+    cadence: "0 9 * * *"           # 09:00 daily - read back what happened overnight

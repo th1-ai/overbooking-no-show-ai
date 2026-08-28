@@ -1,0 +1,17 @@
+{
+  "description": "Same sold-out shape as sold-out-squeeze.json, but rules.oversell_buffer is OFF. recommended must be 0 whatever the prediction says, and no walk plan is built even though the night is sold out.",
+  "date": "2026-09-21",
+  "capacity": 6,
+  "rule_on": false,
+  "buffer_published": 0,
+  "reference_room_type": "classic",
+  "classic_rate": 190,
+  "arrivals": [
+    {"id": "res-301", "guest_name": "G. Peixoto", "room_type": "classic", "channel": "Expedia", "nights": 1, "loyalty": false, "booked_days_ago": 70, "guaranteed": false, "contactable": false},
+    {"id": "res-302", "guest_name": "Y. Rocha", "room_type": "classic", "channel": "Booking.com", "nights": 1, "loyalty": false, "booked_days_ago": 85, "guaranteed": false, "contactable": false},
+    {"id": "res-303", "guest_name": "V. Sousa", "room_type": "classic", "channel": "Direct", "nights": 2, "loyalty": true, "booked_days_ago": 12, "guaranteed": true, "contactable": true},
+    {"id": "res-304", "guest_name": "X. Teixeira", "room_type": "classic", "channel": "Corporate", "nights": 1, "loyalty": false, "booked_days_ago": 8, "guaranteed": true, "contactable": true},
+    {"id": "res-305", "guest_name": "Z. Cardoso", "room_type": "classic", "channel": "Phone", "nights": 1, "loyalty": false, "booked_days_ago": 1, "guaranteed": true, "contactable": true},
+    {"id": "res-306", "guest_name": "C. Lopes", "room_type": "classic", "channel": "Walk-in", "nights": 1, "loyalty": false, "booked_days_ago": 0, "guaranteed": true, "contactable": true}
+  ]
+}

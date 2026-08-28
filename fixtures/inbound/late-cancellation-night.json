@@ -1,0 +1,15 @@
+{
+  "description": "Two cancellations: one 30h before check-in (inside late_cancellation_hours=48, locked at risk_pct=100, still counts as a predicted empty room) and one cancelled 6 days out (well outside the window - a normal cancellation, excluded from tonight's list entirely, as if it never appeared).",
+  "date": "2026-09-22",
+  "capacity": 10,
+  "rule_on": true,
+  "buffer_published": 0,
+  "reference_room_type": "classic",
+  "classic_rate": 180,
+  "arrivals": [
+    {"id": "res-401", "guest_name": "D. Fontes", "room_type": "classic", "channel": "Direct", "nights": 1, "loyalty": false, "booked_days_ago": 12, "guaranteed": true, "contactable": true, "status": "confirmed"},
+    {"id": "res-402", "guest_name": "K. Barbosa", "room_type": "classic", "channel": "Corporate", "nights": 1, "loyalty": false, "booked_days_ago": 9, "guaranteed": true, "contactable": true, "status": "confirmed"},
+    {"id": "res-403", "guest_name": "M. Vidal", "room_type": "classic", "channel": "Expedia", "nights": 2, "loyalty": false, "booked_days_ago": 60, "guaranteed": false, "contactable": false, "status": "cancelled", "cancelled_hours_before_checkin": 30},
+    {"id": "res-404", "guest_name": "P. Ramalho", "room_type": "classic", "channel": "Booking.com", "nights": 1, "loyalty": false, "booked_days_ago": 40, "guaranteed": false, "contactable": true, "status": "cancelled", "cancelled_hours_before_checkin": 144}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "description": "The canonical story: a sold-out night, two guests over 50% risk, a buffer of 2 recommended and capped well under 3.",
+  "date": "2026-09-15",
+  "capacity": 12,
+  "rule_on": true,
+  "buffer_published": 0,
+  "reference_room_type": "classic",
+  "classic_rate": 180,
+  "arrivals": [
+    {"id": "res-101", "guest_name": "A. Ferreira", "room_type": "classic", "channel": "Expedia", "nights": 1, "loyalty": false, "booked_days_ago": 74, "guaranteed": false, "contactable": false},
+    {"id": "res-102", "guest_name": "L. Moreau", "room_type": "deluxe", "channel": "Booking.com", "nights": 2, "loyalty": false, "booked_days_ago": 91, "guaranteed": false, "contactable": false},
+    {"id": "res-103", "guest_name": "M. Dubois", "room_type": "classic", "channel": "Direct", "nights": 3, "loyalty": true, "booked_days_ago": 3, "guaranteed": true, "contactable": true},
+    {"id": "res-104", "guest_name": "R. Silva", "room_type": "classic", "channel": "Corporate", "nights": 1, "loyalty": false, "booked_days_ago": 5, "guaranteed": true, "contactable": true},
+    {"id": "res-105", "guest_name": "T. Nkomo", "room_type": "classic", "channel": "Phone", "nights": 1, "loyalty": false, "booked_days_ago": 1, "guaranteed": true, "contactable": true},
+    {"id": "res-106", "guest_name": "K. Larsen", "room_type": "classic", "channel": "Walk-in", "nights": 1, "loyalty": false, "booked_days_ago": 0, "guaranteed": true, "contactable": true},
+    {"id": "res-107", "guest_name": "J. Petit", "room_type": "deluxe", "channel": "Direct", "nights": 2, "loyalty": true, "booked_days_ago": 20, "guaranteed": true, "contactable": true},
+    {"id": "res-108", "guest_name": "F. Costa", "room_type": "deluxe", "channel": "Airbnb", "nights": 1, "loyalty": false, "booked_days_ago": 10, "guaranteed": true, "contactable": true},
+    {"id": "res-109", "guest_name": "P. Andrade", "room_type": "classic", "channel": "Corporate", "nights": 2, "loyalty": false, "booked_days_ago": 30, "guaranteed": false, "contactable": false},
+    {"id": "res-110", "guest_name": "B. Hughes", "room_type": "classic", "channel": "Vrbo", "nights": 1, "loyalty": false, "booked_days_ago": 45, "guaranteed": false, "contactable": false},
+    {"id": "res-111", "guest_name": "S. Almeida", "room_type": "classic", "channel": "Expedia", "nights": 4, "loyalty": false, "booked_days_ago": 40, "guaranteed": false, "contactable": true},
+    {"id": "res-112", "guest_name": "D. Rocha", "room_type": "classic", "channel": "Direct", "nights": 1, "loyalty": true, "booked_days_ago": 2, "guaranteed": true, "contactable": true}
+  ]
+}

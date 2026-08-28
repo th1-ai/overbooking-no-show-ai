@@ -1,0 +1,19 @@
+{
+  "description": "Not sold out - 8 rooms on the books against 12 capacity. Even with real risk in the mix, buildWalkPlan must return null: overselling a night with rooms left is meaningless.",
+  "date": "2026-09-20",
+  "capacity": 12,
+  "rule_on": true,
+  "buffer_published": 0,
+  "reference_room_type": "classic",
+  "classic_rate": 180,
+  "arrivals": [
+    {"id": "res-201", "guest_name": "N. Costa", "room_type": "classic", "channel": "Expedia", "nights": 1, "loyalty": false, "booked_days_ago": 80, "guaranteed": false, "contactable": false},
+    {"id": "res-202", "guest_name": "H. Wexler", "room_type": "classic", "channel": "Direct", "nights": 2, "loyalty": true, "booked_days_ago": 10, "guaranteed": true, "contactable": true},
+    {"id": "res-203", "guest_name": "I. Berg", "room_type": "classic", "channel": "Corporate", "nights": 1, "loyalty": false, "booked_days_ago": 4, "guaranteed": true, "contactable": true},
+    {"id": "res-204", "guest_name": "Q. Alves", "room_type": "deluxe", "channel": "Booking.com", "nights": 1, "loyalty": false, "booked_days_ago": 55, "guaranteed": false, "contactable": true},
+    {"id": "res-205", "guest_name": "W. Santos", "room_type": "classic", "channel": "Direct", "nights": 1, "loyalty": false, "booked_days_ago": 2, "guaranteed": true, "contactable": true},
+    {"id": "res-206", "guest_name": "E. Marques", "room_type": "classic", "channel": "Phone", "nights": 1, "loyalty": false, "booked_days_ago": 1, "guaranteed": true, "contactable": true},
+    {"id": "res-207", "guest_name": "O. Neto", "room_type": "deluxe", "channel": "Direct", "nights": 3, "loyalty": true, "booked_days_ago": 15, "guaranteed": true, "contactable": true},
+    {"id": "res-208", "guest_name": "U. Freitas", "room_type": "classic", "channel": "Corporate", "nights": 1, "loyalty": false, "booked_days_ago": 6, "guaranteed": true, "contactable": true}
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  {"date": "2026-09-15", "room_type_id": "classic", "price": 180, "currency": "EUR", "min_los": 1, "available": 0, "closed": false},
+  {"date": "2026-09-15", "room_type_id": "deluxe", "price": 240, "currency": "EUR", "min_los": 1, "available": 0, "closed": false},
+  {"date": "2026-09-16", "room_type_id": "classic", "price": 175, "currency": "EUR", "min_los": 1, "available": 3, "closed": false},
+  {"date": "2026-09-16", "room_type_id": "deluxe", "price": 235, "currency": "EUR", "min_los": 1, "available": 2, "closed": false}
+]
